@@ -1,0 +1,49 @@
+<!DOCTYPE html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <title>Rendering</title>
+</head>
+<body>
+          <div id="root"></div>
+          <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+          <script type="text/javascript">
+                    const articleHeading = React.createElement(
+                              'h1',
+                              null,
+                              'My First blog post'
+                    );
+
+                    const paragraph = React.createElement(
+                              'p',
+                              { className: 'text' },
+                              'This is the content of my post.'
+                    );
+
+                    const article = React.createElement(
+                              'article',
+                              null,
+                              articleHeading,
+                              paragraph
+                    );
+
+                    const mainHeading = React.createElement(
+                              'h1',
+                              null,
+                              'My Blog'
+                    );
+
+                    const main = React.createElement(
+                              'main',
+                              { id: 'main'},
+                              mainHeading,
+                              article
+                    );
+
+
+
+                    
+                    ReactDOM.render(main, document.getElementById('root'));
+          </script>
+</body>
+</html>
