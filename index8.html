@@ -1,0 +1,31 @@
+<!DOCTYPE html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <title>Rendering</title>
+</head>
+<body>
+          <div id="root"></div>
+          <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+          <script crossorigin src="https://unpkg.com/@babel/standalone@7.18.10/babel.min.js"></script> 
+          <script type="text/babel">
+                   
+                    let count = 0;
+
+                    const internal = setInterval(() => {
+                            const paragraph = <p>{count}</p>;
+                            
+                            ReactDOM.render(paragraph, document.getElementById('root'));
+
+                              if(count === 1000){
+                                        clearInterval(internal);
+                              } else {
+                                        count++;
+                              }
+
+                    }, 30);
+
+                    
+          </script>
+</body>
+</html>

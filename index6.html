@@ -1,0 +1,21 @@
+<!DOCTYPE html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <title>Rendering</title>
+</head>
+<body>
+
+          <input aria-label="This is a test input" maxlength="10" readonly class="input-style">
+          <div id="root"></div>
+          <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+          <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+          <script crossorigin src="https://unpkg.com/@babel/standalone@7.18.10/babel.min.js"></script> 
+          <script type="text/babel">
+                    const input = (
+                              <input aria-label="This is a test input" maxLength="10" readOnly className="input-style" />
+                    );   
+
+                    ReactDOM.render(input, document.getElementById('root'));
+          </script>
+</body>
+</html>
