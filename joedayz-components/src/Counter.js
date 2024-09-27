@@ -1,4 +1,6 @@
-import React, {Fragment, useState} from 'react';
+import React, { useState} from 'react';
+import InteractiveView from "./Interactive";
+
 
 
 const Counter = () => {
@@ -7,10 +9,8 @@ const Counter = () => {
     const onClickHandler = () => {
         setCounter(counter + 1);
     };
-    return (<Fragment>
-        <p>{counter}</p>
-        <button type="button" onClick={onClickHandler}>Increment</button>
-    </Fragment>);
+    return (<InteractiveView value={counter}
+                         onAction={onClickHandler} actionText="Increment"/>);
 };
 
 export default Counter;
