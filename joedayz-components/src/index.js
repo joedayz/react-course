@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-
-const Paragraph = () => <p>This is my text</p>;
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-        <Paragraph />
+        <App />
   </React.StrictMode>
 );
 
