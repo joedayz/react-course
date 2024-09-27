@@ -1,0 +1,36 @@
+<!DOCTYPE html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendering</title>
+</head>
+<body>
+<div id="root"></div>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone@7.18.10/babel.min.js"></script>
+<script type="text/babel">
+
+    const Paragraph = ({text}) => <p>{text}</p>;
+
+    const Section = ({headingText, children}) => (
+        <section>
+            <h1>{headingText}</h1>
+            {children}
+        </section>
+    );
+
+    const SectionBlock = () => (
+      <Section
+        headingText="My First blog post">
+          <Paragraph text="My first post text"/>
+          <Paragraph text="My second post text"/>
+      </Section>
+    );
+
+
+    ReactDOM.render(<SectionBlock />, document.getElementById('root'));
+
+
+</script>
+</body>
+</html>
