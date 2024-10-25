@@ -9,28 +9,28 @@
           <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
           <script crossorigin src="https://unpkg.com/@babel/standalone@7.18.10/babel.min.js"></script> 
           <script type="text/babel">
-                    const ErrorBlock = ({error}) =>
-                        error.hasError ? (
-                            <p>{error.message}</p>
-                            ):(
-                                <p>Everything is just fine</p>
-                        );
+                    // const ErrorBlock = ({error}) =>
+                    //     error.hasError ? (
+                    //         <p>{error.message}</p>
+                    //         ):(
+                    //             <p>Everything is just fine</p>
+                    //     );
 
-                    const error = {
-                        hasError : false,
-                        message: 'Something is wrong!! Help me!!',
-                    };
+                    // const error = {
+                    //     hasError : true,
+                    //     message: 'Something is wrong!! Help me!!',
+                    // };
 
-                    const container = <div>
-                          <ErrorBlock error={error} />
-                    </div>;
-
-                    //const Paragraph = props => <p>{props.text}</p>;
-                    // const Paragraph = ({text}) => <p>{text}</p>;
-                    //
                     // const container = <div>
-                    //     <Paragraph text="Daniel" />
+                    //       <ErrorBlock error={error} />
                     // </div>;
+
+                    
+                    const Paragraph = ({text}) => <p>{text}</p>;
+                    
+                    const container = <div>
+                        <Paragraph text="Daniel" />
+                    </div>;
 
                     ReactDOM.render(container, document.getElementById('root'));
 
