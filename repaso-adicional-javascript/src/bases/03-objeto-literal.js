@@ -12,7 +12,7 @@ const persona = {
     }
 };
 
-// console.table( persona );
+//console.log( persona );
 
 const persona2 = { ...persona };
 persona2.nombre = 'Peter';

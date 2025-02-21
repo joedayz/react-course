@@ -1,17 +1,17 @@
 
 // Variables y Constantes
 
-const nombre = 'Fernando';
-const apellido = 'Herrera';
+const nombre = 'Mario';
+const apellido = 'Escobar';
 
 let valorDado = 5;
-valorDado = 4;
+valorDado = 7;
 
 console.log( nombre, apellido, valorDado )
 
 // var No se debe de usar...
 if ( true ) {
-    const nombre = 'Peter';
+    const nombre = 'Jose';
     console.log(nombre)
 }
 

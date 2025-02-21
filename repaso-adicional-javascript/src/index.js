@@ -9,8 +9,9 @@ const activo = true;
 // } else {
 //     mensaje = 'Inactivo';
 // }
-// const mensaje = ( activo ) ? 'Activo' : 'Inactivo'; 
-// const mensaje = ( activo ) ? 'Activo' : null; 
+// const mensaje = ( activo ) ? 'Activo' : 'Inactivo';
+// const mensaje = ( activo ) ? 'Activo' : null;
+
 const mensaje = activo && 'Activo';
 
 
