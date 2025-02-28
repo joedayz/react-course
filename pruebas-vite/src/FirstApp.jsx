@@ -1,6 +1,14 @@
-import PropTypes from "prop-types";
 
-export const FirstApp = ({ title = 'No hay titulo', subTitle = 'No hay subtitulo', name = 'No hay nombre'}) => {
+
+
+export const FirstApp = ({ 
+    title = requiredProp("title"), 
+    subTitle = "No hay subtitulo", 
+    name = "No hay nombre" 
+}) => {
+
+    console.log("Props recibidas en FirstApp:", { title, subTitle, name });
+
     return (
         <>
             <h1>{title}</h1>
@@ -10,16 +18,9 @@ export const FirstApp = ({ title = 'No hay titulo', subTitle = 'No hay subtitulo
     );
 };
 
-// Definir PropTypes
-FirstApp.propTypes = {
-    title: PropTypes.string,
-    subTitle: PropTypes.number, // 🔴 Espera un número
-};
-
-// Valores por defecto
-FirstApp.defaultProps = {
-    title: "Soy Goku",
-    subTitle: 100, // Número por defecto
+// Función que lanza un error si falta un prop
+const requiredProp = (propName) => {
+    throw new Error(`El prop "${propName}" es obligatorio.`);
 };
 
 export default FirstApp;

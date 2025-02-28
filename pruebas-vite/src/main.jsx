@@ -6,6 +6,6 @@ import FirstApp from './FirstApp.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FirstApp title='Hola, soy JoeDayz'/>
+    <FirstApp />
   </StrictMode>,
 )
